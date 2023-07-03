@@ -1,3 +1,8 @@
+/* Start Variables */
+:root {
+  --main-color: #19c8fa;
+}
+/* End Variables */
 /* Start Global Rules */
 * {
   -webkit-box-sizing: border-box;
@@ -43,7 +48,7 @@ ul {
 /* End Global Rules */
 /* Start Header */
 header {
-  
+
 }
 header .container {
   display: flex;
@@ -65,5 +70,41 @@ header .logo img {
 }
 header nav {
   flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+header nav ul {
+  display: flex;
+}
+header nav ul li a {
+  padding: 40px 10px;
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0,3s;
+  position: relative;
+  z-index: 2;
+}
+header nav ul li a.active,
+header nav ul li a:hover {
+  color: var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+}
+header nav .form {
+  height: 30px;
+  width: 40px;
+  position: relative;
+  margin-left: 30px;
+  border-left: 1px solid white;
+}
+header nav .form i {
+  color: white;
+  position: absolute;
+  font-size: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
 }
 /* End Header */
