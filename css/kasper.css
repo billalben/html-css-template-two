@@ -736,6 +736,21 @@ header nav .form i {
   background-color: #fff8f8;
   text-align: center;
 }
+@media (min-width: 992px) and (max-width: 1199px) {
+  .pricing .plans {
+    grid-template-columns: repeat(2, minmax(250px, 450px));
+    grid-gap: 70px;
+
+    /* you can do it in flex
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    */
+  }
+  /* .pricing .plans .plan {
+    flex-basis: 45%;
+  } */
+}
 .pricing .plans .plan .head {
   padding: 40px 20px;
   border-top: 2px solid var(--main-color);
@@ -764,5 +779,44 @@ header nav .form i {
   position: relative;
   right: -5px;
   font-weight: bold;
+}
+.pricing .plans .plan ul {
+  border-bottom: 2px solid var(--main-color);
+}
+.pricing .plans .plan ul li {
+  padding: 20px;
+  position: relative;
+}
+.pricing .plans .plan ul li:not(:last-child)::after {
+  content: "";
+  width: 200px;
+  height: 2px;
+  position: absolute;
+  background-color: var(--main-color);
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+.pricing .plans .plan .foot a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  border: 2px solid var(--main-color);
+  width: fit-content;
+  margin: 30px auto;
+}
+.pricing .contact-text {
+  text-align: center;
+  margin: 50px auto 20px;
+  font-size: 20px;
+}
+.pricing .contact-link {
+  display: block;
+  padding: 15px 30px;
+  width: fit-content;
+  text-decoration: none;
+  background-color: var(--main-color);
+  color: white;
+  margin: 20px auto;
 }
 /* End Pricing Section */
