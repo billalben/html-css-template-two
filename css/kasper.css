@@ -374,6 +374,7 @@ header nav .form i {
 }
 .portfolio .shuffle li {
   padding: 10px;
+  border-radius: 5px;
 }
 .portfolio .shuffle li.active {
   background-color: var(--main-color);
@@ -433,6 +434,7 @@ header nav .form i {
   margin: 30px auto;
   text-decoration: none;
   text-transform: uppercase;
+  border-radius: 5px;
 }
 /* End Portfolio */
 /* Start Video */
@@ -474,6 +476,7 @@ header nav .form i {
   color: white;
   padding: 10px 20px;
   border: none;
+  border-radius: 5px;
   text-transform: uppercase;
 }
 /* End Video */
@@ -648,12 +651,14 @@ header nav .form i {
 .our-skills .skills .prog-holder .prog {
   background-color: #dedadc;
   height: 30px;
+  border-radius: 5px;
 }
 .our-skills .skills .prog-holder .prog span {
   display: block;
   background-color: var(--main-color);
   height: 100%;
   position: relative;
+  border-radius: 5px 0 0 5px;
 }
 .our-skills .skills .prog-holder .prog span::before {
   content: attr(data-progress);
@@ -802,6 +807,7 @@ header nav .form i {
   padding: 10px;
   text-decoration: none;
   border: 2px solid var(--main-color);
+  border-radius: 5px;
   width: fit-content;
   margin: 30px auto;
 }
@@ -818,6 +824,7 @@ header nav .form i {
   background-color: var(--main-color);
   color: white;
   margin: 20px auto;
+  border-radius: 5px;
 }
 /* End Pricing Section */
 /* Start Subscribe Section */
@@ -864,10 +871,12 @@ header nav .form i {
 .subscribe form input[type="email"] {
   border: 1px solid white;
   border-right: none;
+  border-radius: 5px 0 0 5px;
   background: none;
   padding: 20px 20px 20px 60px;
   caret-color: var(--main-color);
   width: calc(100% - 130px);
+  color: white;
 }
 .subscribe form input[type="submit"] {
   width: 130px;
@@ -876,7 +885,9 @@ header nav .form i {
   padding: 10px 20px;
   border: 1px solid white;
   border-left: none;
+  border-radius: 0 5px 5px 0px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 .subscribe form input[type="email"]:focus,
 .subscribe form input[type="submit"]:focus {
@@ -895,3 +906,83 @@ header nav .form i {
   }
 }
 /* End Subscribe Section */
+/* Start Contact Us Section */
+.contact {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.contact .content {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .contact .content {
+    flex-direction: column;
+  }
+}
+.contact .content form {
+  flex-basis: 70%;
+}
+.contact .content form .mail-input {
+  padding: 20px;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  width: 100%;
+}
+.contact .content form .mail-input:focus {
+  outline: none;
+}
+.contact .content form textarea.mail-input {
+  height: 200px;
+}
+.contact .content form input[type="submit"] {
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  margin-left: auto;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.contact .content .info {
+  flex-basis: 25%;
+}
+@media (max-width: 767px) {
+  .contact .content .info {
+    order: -1;
+    text-align: center;
+  }
+}
+.contact .content .info h4 {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-size: 18px;
+}
+.contact .content .info .phone {
+  display: block;
+  color: #777;
+  margin-bottom: 10px;
+}
+.contact .content .info h4:nth-of-type(2) {
+  margin-top: 90px;
+}
+@media (max-width: 767px) {
+  .contact .content .info h4:nth-of-type(2) {
+    margin-top: 30px;
+  }
+}
+.contact .content .info address {
+  color: #777;
+  line-height: 1.5;
+}
+@media (max-width: 767px) {
+  .contact .content .info address {
+    margin-bottom: 40px;
+  }
+}
+/* End Contact Us Section */
