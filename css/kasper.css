@@ -1,11 +1,11 @@
-/* Start Variables */
+/* ============ Start Variables ================ */
 :root {
   --main-color: #19c8fa;
   --transparent-color: rgb(15 116 143 / 70%);
   --section-padding: 100px;
 }
-/* End Variables */
-/* Start Global Rules */
+
+/* ============ Start Global Rules ================ */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -17,16 +17,14 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 ul {
   list-style: none;
 }
 .container {
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+  padding-inline: 1rem;
+  margin-inline: auto;
 }
 /* Small */
 @media (min-width: 768px) {
@@ -46,14 +44,14 @@ ul {
     width: 1170px;
   }
 }
-/* End Global Rules */
-/* Start Components */
+
+/* ============ Start Components Section ================ */
 .main-heading {
   text-align: center;
 }
 .main-heading h2 {
   font-weight: normal;
-  font-size: 40px;
+  font-size: 2.5rem;
   position: relative;
   margin-bottom: 70px;
   text-transform: uppercase;
@@ -87,8 +85,8 @@ ul {
   line-height: 2;
   color: #777;
 }
-/* End Components */
-/* Start Header */
+
+/* ============ Start Header Section ================ */
 header {
   position: absolute;
   left: 0;
@@ -122,9 +120,9 @@ header nav {
 }
 header nav .toggle-menu {
   color: white;
-  font-size: 22px;
+  font-size: 1.375rem;
 }
-@media (min-width:767px) {
+@media (min-width: 767px) {
   header nav .toggle-menu {
     display: none;
   }
@@ -132,7 +130,7 @@ header nav .toggle-menu {
 header nav ul {
   display: flex;
 }
-@media (max-width:767px) {
+@media (max-width: 767px) {
   header nav ul {
     display: none;
   }
@@ -146,16 +144,16 @@ header nav ul {
     background: rgb(0 0 0 / 50%);
   }
   header nav .toggle-menu:hover + ul li a {
-    padding: 15px;
+    padding: 1rem;
   }
 }
 header nav ul li a {
-  padding: 40px 10px;
+  padding: 2.5rem 0.625rem;
   display: block;
   color: white;
   text-decoration: none;
-  font-size: 14px;
-  transition: 0,3s;
+  font-size: 0.875rem;
+  transition: 0, 3s;
   position: relative;
   z-index: 2;
 }
@@ -168,19 +166,19 @@ header nav .form {
   height: 30px;
   width: 40px;
   position: relative;
-  margin-left: 30px;
+  margin-left: 1.875rem;
   border-left: 1px solid white;
 }
 header nav .form i {
   color: white;
   position: absolute;
-  font-size: 20px;
+  font-size: 1.25rem;
   top: 50%;
   transform: translateY(-50%);
   right: 0;
 }
-/* End Header */
-/* Start Landing */
+
+/* ============ Start Landing Section ================ */
 .landing {
   min-height: 100vh;
   background-image: url("../images/landing.jpg");
@@ -201,7 +199,7 @@ header nav .form i {
   top: 50%;
   transform: translateY(-50%);
   width: 50%;
-  padding: 50px;
+  padding: 3.125rem;
   background-color: var(--transparent-color);
   color: white;
   display: flex;
@@ -219,13 +217,13 @@ header nav .form i {
   }
 }
 .landing .text .content h2 {
-  font-size: 32px;
+  font-size: 1rem;
   font-weight: normal;
   line-height: 1.5;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 .landing .text .content p {
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 2;
 }
 .landing .change-background {
@@ -263,49 +261,47 @@ header nav .form i {
   background-color: var(--main-color);
   border-color: var(--main-color);
 }
-/* End Landing */
-/* Start Services */
+
+/* ============ Start Services Section ================ */
 .services {
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
+  padding-block: var(--section-padding);
 }
 @media (min-width: 768px) {
   .services .services-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-    grid-column-gap: 40px;
-    grid-row-gap: 60px;
+    grid-column-gap: 2.5rem;
+    grid-row-gap: 3.75rem;
   }
 }
 .services .services-container .srv-box {
   display: flex;
 }
 .services .services-container .srv-box i {
-  margin-right: 50px;
+  margin-right: 3.125rem;
 }
 @media (max-width: 767px) {
   .services .services-container .srv-box {
     flex-direction: column;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
   }
   .services .services-container .srv-box i {
-    margin: 0 0 30px;
+    margin: 0 0 1.875rem;
   }
 }
 .services .services-container .srv-box .text h3 {
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
   color: var(--main-color);
 }
 .services .services-container .srv-box .text p {
   line-height: 2;
   color: #777;
 }
-/* End Services */
-/* Start Design Section */
+
+/* ============ Start Design Section ================ */
 .design {
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
+  padding-block: var(--section-padding);
   height: 600px;
   position: relative;
   background-image: url(../images/design-features.jpg);
@@ -343,38 +339,37 @@ header nav .form i {
 }
 .design .text {
   color: white;
-  padding: 50px;
+  padding: 3.125rem;
   background-color: var(--transparent-color);
 }
 .design .text h2 {
   font-weight: normal;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 .design .text ul li {
-  padding: 15px 0;
+  padding: 1rem 0;
 }
 .design .text ul li::before {
   font-family: "Font Awesome 5 Free";
   content: "\f108";
   font-weight: 900;
-  margin-right: 20px;
+  margin-right: 1.25rem;
   position: relative;
   top: 1px;
 }
-/* End Design Section */
-/* Start Portfolio */
+
+/* ============ Start Portfolio Section ================ */
 .portfolio {
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
+  padding-block: var(--section-padding);
 }
 .portfolio .shuffle {
   display: flex;
   justify-content: center;
 }
 .portfolio .shuffle li {
-  padding: 10px;
-  border-radius: 5px;
+  padding: 0.625rem;
+  border-radius: 0.25rem;
 }
 .portfolio .shuffle li.active {
   background-color: var(--main-color);
@@ -383,7 +378,7 @@ header nav .form i {
 .portfolio .imgs-container {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 60px;
+  margin-top: 3.75rem;
 }
 .portfolio .imgs-container .box {
   overflow: hidden;
@@ -412,7 +407,7 @@ header nav .form i {
 .portfolio .imgs-container .box .caption {
   position: absolute;
   left: 0;
-  padding: 20px;
+  padding: 1.25rem;
   background-color: white;
   width: 100%;
   transition: 0.3s;
@@ -420,7 +415,7 @@ header nav .form i {
 }
 .portfolio .imgs-container .box .caption h4 {
   font-weight: normal;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 .portfolio .imgs-container .box .caption p {
   color: var(--main-color);
@@ -428,16 +423,16 @@ header nav .form i {
 .portfolio .more {
   background-color: var(--main-color);
   color: white;
-  padding: 15px 20px;
+  padding: 1rem 1.25rem;
   display: block;
   width: fit-content;
-  margin: 30px auto;
+  margin: 1.875rem auto;
   text-decoration: none;
   text-transform: uppercase;
-  border-radius: 5px;
+  border-radius: 0.25rem;
 }
-/* End Portfolio */
-/* Start Video */
+
+/* ============ Start Video Section ================ */
 .video {
   position: relative;
 }
@@ -458,29 +453,29 @@ header nav .form i {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  padding: 50px;
+  padding: 3.125rem;
   background-color: var(--transparent-color);
   color: white;
   text-align: center;
 }
 .video .text h2 {
-  margin: 0 0 30px;
+  margin: 0 0 1.875rem;
   text-transform: uppercase;
   font-weight: normal;
 }
 .video .text p {
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 .video .text button {
   background-color: rgb(0 0 0 / 50%);
   color: white;
-  padding: 10px 20px;
+  padding: 0.625rem 1.25rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.25rem;
   text-transform: uppercase;
 }
-/* End Video */
-/* Start About */
+
+/* ============ Start About Section ================ */
 .about {
   padding-top: var(--section-padding);
   overflow: hidden;
@@ -497,11 +492,10 @@ header nav .form i {
     bottom: -60px;
   }
 }
-/* End About */
-/* Start Statistics */
+
+/* ============ Start Statistics Section ================ */
 .stats {
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
+  padding-block: var(--section-padding);
   text-align: center;
   background-image: url(../images/stats.png);
   background-size: cover;
@@ -524,52 +518,51 @@ header nav .form i {
 }
 .stats .container .box {
   color: white;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 1.25rem;
+  border-radius: 0.625rem;
   background-color: var(--transparent-color);
 }
 @media (max-width: 767px) {
   .stats .container .box {
     flex-basis: 100%;
-    margin-bottom: 12px;
-    border-radius: 10px;
+    margin-bottom: 0.75rem;
+    border-radius: 0.625rem;
   }
 }
 @media (min-width: 768px) {
   .stats .container .box {
     flex-basis: 49%;
-    margin-bottom: 12px;
+    margin-bottom: 0.75rem;
   }
 }
 @media (min-width: 992px) {
   .stats .container .box {
     flex-basis: 24%;
-    margin-bottom: 12px;
+    margin-bottom: 0.75rem;
   }
 }
 .stats .container .box i {
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   display: flex;
   background-color: black;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  margin: 0 auto 30px;
+  margin: 0 auto 1.5rem;
 }
 .stats .container .box .number {
-  font-size: 50px;
+  font-size: 3rem;
   font-weight: 400;
-  margin: 0 0 20px;
+  margin: 0 0 1rem;
 }
 .stats .container .box p {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
-/* End Statistics */
-/* Start Skills */
+
+/* ============ Start Skills Section ================ */
 .our-skills {
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
+  padding-block: var(--section-padding);
 }
 .our-skills .container {
   display: flex;
@@ -582,7 +575,7 @@ header nav .form i {
   }
 }
 .our-skills .container > div > h3 {
-  margin: 0 0 30px;
+  margin: 0 0 1.875rem;
   font-weight: normal;
   text-align: center;
   text-transform: uppercase;
@@ -591,26 +584,26 @@ header nav .form i {
   color: #777;
   line-height: 2;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 3.75rem;
 }
 .our-skills .testimonials .content {
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
   align-items: center;
 }
 .our-skills .testimonials .content img {
   width: 100px;
   /* height: 100px; */
   border-radius: 50%;
-  margin-right: 50px;
+  margin-right: 3.125rem;
 }
-@media (max-width: 767px){
+@media (max-width: 767px) {
   .our-skills .testimonials .content {
     flex-direction: column;
     text-align: center;
   }
   .our-skills .testimonials .content img {
-    margin: 0 auto 20px;
+    margin: 0 auto 1.25rem;
   }
 }
 .our-skills .testimonials .content .text {
@@ -620,45 +613,45 @@ header nav .form i {
 .our-skills .testimonials .content .text p {
   color: #777;
   text-align: right;
-  font-size: 14px;
-  margin-bottom: 10px;
+  font-size: 0.875rem;
+  margin-bottom: 0.625rem;
 }
 .our-skills .testimonials .bullets {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 3.125rem;
+  margin-bottom: 3.125rem;
 }
 .our-skills .testimonials .bullets li {
-  width: 14px;
-  height: 14px;
+  width: 0.875rem;
+  height: 0.875rem;
   border: 1px solid #aaa;
   border-radius: 50%;
-  margin-right: 10px;
+  margin-right: 0.625rem;
 }
 .our-skills .testimonials .bullets li.active {
   background-color: var(--main-color);
   border-color: var(--main-color);
 }
 .our-skills .skills .prog-holder {
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 .our-skills .skills .prog-holder h4 {
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
   font-weight: normal;
   text-transform: uppercase;
 }
 .our-skills .skills .prog-holder .prog {
   background-color: #dedadc;
-  height: 30px;
-  border-radius: 5px;
+  height: 1.875rem;
+  border-radius: 0.25rem;
 }
 .our-skills .skills .prog-holder .prog span {
   display: block;
   background-color: var(--main-color);
   height: 100%;
   position: relative;
-  border-radius: 5px 0 0 5px;
+  border-radius: 0.25rem 0 0 0.25rem;
 }
 .our-skills .skills .prog-holder .prog span::before {
   content: attr(data-progress);
@@ -668,24 +661,23 @@ header nav .form i {
   top: -40px;
   right: -21px;
   padding: 1px 2px;
-  width: 40px;
+  width: 2.5rem;
   text-align: center;
-  border-radius: 4px;
+  border-radius: 0.25rem;
 }
 .our-skills .skills .prog-holder .prog span::after {
   content: "";
   position: absolute;
   border-style: solid;
-  border-width: 8px;
+  border-width: 0.5rem;
   border-color: black transparent transparent;
   right: -8px;
   top: -15px;
 }
-/* End Skills */
-/* Start Quote */
+
+/* ============ Start Quote Section ================ */
 .quote {
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
+  padding-block: var(--section-padding);
   background-image: url("../images/quote.jpg");
   background-size: cover;
   position: relative;
@@ -706,15 +698,15 @@ header nav .form i {
 }
 .quote .container q {
   display: block;
-  font-size: 30px;
-  margin-bottom: 20px;
+  font-size: 1.875rem;
+  margin-bottom: 1.25rem;
   line-height: 2;
 }
 .quote .container q::before {
   font-family: "Font Awesome 5 Free";
   content: "\f10d";
   font-weight: 900;
-  margin-right: 10px;
+  margin-right: 0.625rem;
   position: relative;
   top: -18px;
 }
@@ -722,20 +714,19 @@ header nav .form i {
   font-family: "Font Awesome 5 Free";
   content: "\f10d";
   font-weight: 900;
-  margin-right: 10px;
+  margin-right: 0.625rem;
   position: relative;
   top: -18px;
 }
-/* End Quote */
-/* Start Pricing Section */
+
+/* ============ Start Pricing Section ================ */
 .pricing {
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
+  padding-block: var(--section-padding);
 }
 .pricing .plans {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 30px;
+  gap: 1.875rem;
 }
 .pricing .plans .plan {
   background-color: #fff8f8;
@@ -745,42 +736,33 @@ header nav .form i {
   .pricing .plans {
     grid-template-columns: repeat(2, minmax(250px, 450px));
     grid-gap: 70px;
-
-    /* you can do it in flex
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    */
   }
-  /* .pricing .plans .plan {
-    flex-basis: 45%;
-  } */
 }
 .pricing .plans .plan .head {
-  padding: 40px 20px;
+  padding: 2.5rem 1.25rem;
   border-top: 2px solid var(--main-color);
   border-bottom: 2px solid var(--main-color);
 }
 .pricing .plans .plan .head h3 {
   font-weight: normal;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   text-transform: uppercase;
 }
 .pricing .plans .plan .head .price {
-  font-size: 50px;
+  font-size: 3.125rem;
   font-weight: 600;
 }
 .pricing .plans .plan .head .price::before {
   content: "$";
-  font-size: 20px;
+  font-size: 1.25rem;
   position: relative;
   top: -40px;
-  margin-right: 8px;
+  margin-right: 0.5rem;
   font-weight: normal;
 }
 .pricing .plans .plan .head .price::after {
   content: "/MO";
-  font-size: 20px;
+  font-size: 1.25rem;
   position: relative;
   right: -5px;
   font-weight: bold;
@@ -789,7 +771,7 @@ header nav .form i {
   border-bottom: 2px solid var(--main-color);
 }
 .pricing .plans .plan ul li {
-  padding: 20px;
+  padding: 1.25rem;
   position: relative;
 }
 .pricing .plans .plan ul li:not(:last-child)::after {
@@ -804,33 +786,32 @@ header nav .form i {
 }
 .pricing .plans .plan .foot a {
   display: block;
-  padding: 10px;
+  padding: 0.625rem;
   text-decoration: none;
   border: 2px solid var(--main-color);
-  border-radius: 5px;
+  border-radius: 0.25rem;
   width: fit-content;
-  margin: 30px auto;
+  margin: 1.875rem auto;
 }
 .pricing .contact-text {
   text-align: center;
-  margin: 50px auto 20px;
-  font-size: 20px;
+  margin: 3.125rem auto 1.25rem;
+  font-size: 1.25rem;
 }
 .pricing .contact-link {
   display: block;
-  padding: 15px 30px;
+  padding: 1rem 1.825rem;
   width: fit-content;
   text-decoration: none;
   background-color: var(--main-color);
   color: white;
-  margin: 20px auto;
+  margin: 1.25rem auto;
   border-radius: 5px;
 }
 /* End Pricing Section */
 /* Start Subscribe Section */
 .subscribe {
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
+  padding-block: var(--section-padding);
   background-image: url(../images/subscribe.jpg);
   background-size: cover;
   position: relative;
@@ -860,20 +841,19 @@ header nav .form i {
   position: relative;
   width: 500px;
   max-width: 100%;
-
 }
-.subscribe form i{
+.subscribe form i {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 20px;
+  left: 1.25rem;
 }
 .subscribe form input[type="email"] {
   border: 1px solid white;
   border-right: none;
   border-radius: 5px 0 0 5px;
   background: none;
-  padding: 20px 20px 20px 60px;
+  padding: 1.25rem 1.25rem 1.25rem 3.75rem;
   caret-color: var(--main-color);
   width: calc(100% - 130px);
   color: white;
@@ -882,10 +862,10 @@ header nav .form i {
   width: 130px;
   background-color: var(--main-color);
   color: white;
-  padding: 10px 20px;
+  padding: 0.625rem 1.25rem;
   border: 1px solid white;
   border-left: none;
-  border-radius: 0 5px 5px 0px;
+  border-radius: 0 0.25rem 0.25rem 0px;
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -898,18 +878,17 @@ header nav .form i {
 }
 .subscribe p {
   line-height: 1.5;
-  margin-left: 50px;
+  margin-left: 3.125rem;
 }
 @media (max-width: 991px) {
   .subscribe p {
-  margin: 30px 0 0;
+    margin: 1.875rem 0 0;
   }
 }
 /* End Subscribe Section */
 /* Start Contact Us Section */
 .contact {
-  padding-top: var(--section-padding);
-  padding-bottom: var(--section-padding);
+  padding-block: var(--section-padding);
 }
 .contact .content {
   display: flex;
@@ -924,11 +903,11 @@ header nav .form i {
   flex-basis: 70%;
 }
 .contact .content form .mail-input {
-  padding: 20px;
+  padding: 1.25rem;
   display: block;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-bottom: 30px;
+  border-radius: 0.25rem;
+  margin-bottom: 1.875rem;
   width: 100%;
 }
 .contact .content form .mail-input:focus {
@@ -941,8 +920,8 @@ header nav .form i {
   background-color: var(--main-color);
   color: white;
   border: none;
-  border-radius: 5px;
-  padding: 20px;
+  border-radius: 0.25rem;
+  padding: 1.25rem;
   display: flex;
   margin-left: auto;
   text-transform: uppercase;
@@ -959,21 +938,21 @@ header nav .form i {
 }
 .contact .content .info h4 {
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 .contact .content .info .phone {
   display: block;
   color: #777;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 .contact .content .info h4:nth-of-type(2) {
-  margin-top: 90px;
+  margin-top: 5.625rem;
 }
 @media (max-width: 767px) {
   .contact .content .info h4:nth-of-type(2) {
-    margin-top: 30px;
+    margin-top: 1.875rem;
   }
 }
 .contact .content .info address {
@@ -982,14 +961,13 @@ header nav .form i {
 }
 @media (max-width: 767px) {
   .contact .content .info address {
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
   }
 }
-/* End Contact Us Section */
-/* Start Footer Section */
+
+/* ============ Start Footer Section ================ */
 .footer {
-  padding-top: calc(var(--section-padding) / 2);
-  padding-bottom: calc(var(--section-padding) / 2);
+  padding-block: calc(var(--section-padding) / 2);
   background-image: url(../images/subscribe.jpg);
   background-size: cover;
   position: relative;
@@ -1013,21 +991,19 @@ header nav .form i {
 }
 .footer .container p:not(.copyright) {
   text-transform: uppercase;
-  padding: 20px;
+  padding: 1.25rem;
   border-bottom: 1px solid white;
-  font-size: 22px;
+  font-size: 1.375rem;
   width: fit-content;
-  margin: 20px auto;
+  margin: 1.25rem auto;
 }
 .footer .container .social-icons i {
-  padding: 10px 15px;
+  padding: 0.625rem 1rem;
 }
 .footer .container .copyright {
-  margin-top: 60px;
+  margin-top: 3.75rem;
 }
 .footer .container .copyright span {
   font-weight: bold;
   color: var(--main-color);
-  
 }
-/* End Footer Section */
