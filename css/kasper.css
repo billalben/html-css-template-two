@@ -1,6 +1,6 @@
 /* ============ Start Variables ================ */
 :root {
-  --main-color: #19c8fa;
+  --main-color: #099fca;
   --transparent-color: rgb(15 116 143 / 70%);
   --section-padding: 6rem;
 }
@@ -68,7 +68,7 @@ textarea {
   margin: 0 auto 3.5rem;
   max-width: 100%;
   line-height: 2;
-  color: #777;
+  color: #716d6d;
 }
 
 /* ============ Start Header Section ================ */
@@ -234,7 +234,7 @@ header nav .form i {
 }
 .services .services-container .srv-box .text p {
   line-height: 2;
-  color: #777;
+  color: #716d6d;
 }
 
 /* ============ Start Design Section ================ */
@@ -479,7 +479,7 @@ header nav .form i {
   text-transform: uppercase;
 }
 .our-skills .container > div > p {
-  color: #777;
+  color: #716d6d;
   line-height: 2;
   text-align: center;
   margin-bottom: 3.75rem;
@@ -500,7 +500,7 @@ header nav .form i {
   border-bottom: 1px solid #ccc;
 }
 .our-skills .testimonials .content .text p {
-  color: #777;
+  color: #716d6d;
   text-align: right;
   font-size: 0.875rem;
   margin-bottom: 0.625rem;
@@ -815,14 +815,14 @@ header nav .form i {
 }
 .contact .content .info .phone {
   display: block;
-  color: #777;
+  color: #7b7373;
   margin-bottom: 0.625rem;
 }
 .contact .content .info h4:nth-of-type(2) {
   margin-top: 5.625rem;
 }
 .contact .content .info address {
-  color: #777;
+  color: #7b7373;
   line-height: 1.5;
 }
 
