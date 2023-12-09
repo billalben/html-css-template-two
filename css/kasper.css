@@ -612,7 +612,7 @@ header nav .form i {
   font-weight: 900;
   margin-right: 0.625rem;
   position: relative;
-  top: -18px;
+  top: -15px;
 }
 .quote .container q::after {
   font-family: "Font Awesome 5 Free";
@@ -620,7 +620,7 @@ header nav .form i {
   font-weight: 900;
   margin-right: 0.625rem;
   position: relative;
-  top: -18px;
+  top: -15px;
 }
 
 /* ============ Start Pricing Section ================ */
@@ -896,6 +896,20 @@ header nav .form i {
 
 /* =========== */
 @media (max-width: 767px) {
+  :root {
+    --section-padding: 3rem;
+  }
+
+  .main-heading h2 {
+    font-size: 2rem;
+  }
+  .main-heading p {
+    line-height: 1.6;
+  }
+
+  header .container {
+    min-height: 75px;
+  }
   header nav .toggle-menu {
     display: block;
   }
@@ -923,10 +937,16 @@ header nav .form i {
   }
 
   .about img {
-    bottom: -60px;
+    bottom: -100px;
   }
   .design .image {
     display: none;
+  }
+
+  .quote .container q {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    line-height: 2;
   }
 
   .services .services-container {
@@ -942,12 +962,28 @@ header nav .form i {
     margin: 0 0 1.875rem;
   }
 
+  .video .text {
+    padding: 1.5rem;
+  }
+
+  .stats .container .box i {
+    margin: 0 auto 0.875rem;
+  }
+  .stats .container .box .number {
+    font-size: 2rem;
+  }
+
   .our-skills .testimonials .content {
     flex-direction: column;
     text-align: center;
   }
   .our-skills .testimonials .content img {
     margin: 0 auto 1.25rem;
+  }
+  .our-skills .container > div > p {
+    line-height: 1.7;
+    text-align: start;
+    margin-bottom: 1.875rem;
   }
 
   .contact .content {
@@ -962,6 +998,25 @@ header nav .form i {
   }
   .contact .content .info address {
     margin-bottom: 2.5rem;
+  }
+  .contact .content form .mail-input {
+    padding: 1rem;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  .footer .container p:not(.copyright) {
+    padding: 1.25rem;
+    border-bottom: 1px solid white;
+    font-size: 1.375rem;
+    width: fit-content;
+    margin: 0.25rem auto;
+  }
+  .footer .container .copyright {
+    margin-top: 2rem;
   }
 }
 @media (max-width: 991px) {
