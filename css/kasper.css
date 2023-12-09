@@ -440,16 +440,22 @@ header nav .form i {
   padding: 1rem;
   border-radius: 0.625rem;
   background-color: var(--transparent-color);
+  overflow: hidden;
 }
 .stats .container .box i {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.75rem;
+  height: 2.75rem;
   display: flex;
-  background-color: black;
+  background-color: #00000059;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
   margin: 0 auto 1.5rem;
+  transition: background-color 1.2s, box-shadow 0.9s;
+}
+.stats .container .box:hover i {
+  box-shadow: 0 40px 0 180px #099fca99;
+  background-color: black;
 }
 .stats .container .box .number {
   font-size: 3rem;
