@@ -88,3 +88,26 @@ dotsSpans.forEach((span, index) => {
     hero.style.backgroundImage = `url("./src/images/${heroImages[currentImageIndex]}")`;
   });
 });
+
+// filter photos
+const shuffleBtns = document.querySelectorAll(".shuffle li");
+const photoBoxes = document.querySelectorAll(".imgs-container .box");
+
+let lastActiveShuffleBtn = shuffleBtns[0];
+lastActiveShuffleBtn.classList.add("active");
+
+shuffleBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    lastActiveShuffleBtn.classList.remove("active");
+    btn.classList.add("active");
+    lastActiveShuffleBtn = btn;
+
+    const filter = btn.dataset.category;
+
+    photoBoxes.forEach((box) => {
+      if (filter === "all") box.style.display = "block";
+      else
+        box.style.display = box.dataset.category === filter ? "block" : "none";
+    });
+  });
+});

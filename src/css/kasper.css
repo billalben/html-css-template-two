@@ -304,10 +304,12 @@ header nav .form i {
 .portfolio .shuffle {
   display: flex;
   justify-content: center;
+  gap: 1rem;
 }
 .portfolio .shuffle li {
-  padding: 0.625rem;
+  padding: 6px 12px;
   border-radius: 0.25rem;
+  cursor: pointer;
 }
 .portfolio .shuffle li.active {
   background-color: var(--main-color);
