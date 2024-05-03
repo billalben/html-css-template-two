@@ -1,3 +1,5 @@
+"use strict";
+
 const skillsSection = document.querySelector(".our-skills");
 const spans = document.querySelectorAll(".prog span");
 const nums = document.querySelectorAll(".stats .box .number");
@@ -43,3 +45,46 @@ function startCount(targetElement) {
     }
   }, 1500 / goal);
 }
+
+// Change hero background image
+const hero = document.querySelector(".landing");
+
+const heroImages = ["landing-02.jpg", "landing-03.jpg", "landing-04.jpg"];
+
+const prevBtn = document.querySelector(".previous-btn");
+const nextBtn = document.querySelector(".next-btn");
+const dotsSpans = document.querySelectorAll(".landing .bullets li");
+
+let currentImageIndex = 0;
+let lastActiveSpan = dotsSpans[0];
+dotsSpans[0].classList.add("active");
+
+prevBtn.addEventListener("click", () => {
+  currentImageIndex =
+    (currentImageIndex - 1 + heroImages.length) % heroImages.length;
+  hero.style.backgroundImage = `url("./src/images/${heroImages[currentImageIndex]}")`;
+
+  lastActiveSpan.classList.remove("active");
+  dotsSpans[currentImageIndex].classList.add("active");
+  lastActiveSpan = dotsSpans[currentImageIndex];
+});
+
+nextBtn.addEventListener("click", () => {
+  currentImageIndex = (currentImageIndex + 1) % heroImages.length;
+  hero.style.backgroundImage = `url("./src/images/${heroImages[currentImageIndex]}")`;
+
+  lastActiveSpan.classList.remove("active");
+  dotsSpans[currentImageIndex].classList.add("active");
+  lastActiveSpan = dotsSpans[currentImageIndex];
+});
+
+dotsSpans.forEach((span, index) => {
+  span.addEventListener("click", () => {
+    lastActiveSpan.classList.remove("active");
+    span.classList.add("active");
+    lastActiveSpan = span;
+
+    currentImageIndex = index;
+    hero.style.backgroundImage = `url("./src/images/${heroImages[currentImageIndex]}")`;
+  });
+});
