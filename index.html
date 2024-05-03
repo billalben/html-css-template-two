@@ -7,9 +7,9 @@
     <meta name="description" content="Kasper Website Template" />
     <title>Kasper | Template Two</title>
     <!-- Render All Elements Normally -->
-    <link rel="icon" type="image/x-icon" href="./src/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./src/images/favicon.ico" />
     <!-- Font Awesome Library -->
-    <link rel="stylesheet" href="src/css/all.min.css">
+    <link rel="stylesheet" href="src/css/all.min.css" />
     <!-- Main Template css file -->
     <link rel="stylesheet" href="./src/css/normalize.css" />
     <link rel="stylesheet" href="./src/css/kasper.css" />
@@ -29,7 +29,11 @@
           <img src="./src/images/logo.png" alt="Logo" />
         </a>
         <nav>
-          <i class="fas fa-bars toggle-menu"></i>
+          <i
+            role="button"
+            class="fas fa-bars toggle-menu"
+            data-toggler-menu
+          ></i>
           <ul>
             <li><a class="active" href="#">Home</a></li>
             <li><a href="#services">Services</a></li>
@@ -38,12 +42,11 @@
             <li><a href="#pricing">Pricing</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
-          <div class="form">
-            <i class="fas fa-search"></i>
-          </div>
         </nav>
       </div>
     </header>
+
+    <div class="overlay" data-toggler-menu></div>
 
     <main>
       <!-- ==================== Start Landing Section ====================== -->

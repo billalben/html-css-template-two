@@ -1,5 +1,25 @@
 "use strict";
 
+// Navbar on small screens
+const menuBtn = document.querySelectorAll("[data-toggler-menu]");
+const nav = document.querySelector("nav ul");
+const overlay = document.querySelector(".overlay");
+const navLinks = document.querySelectorAll("nav ul li a");
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+});
+
+menuBtn.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    nav.classList.toggle("active");
+    overlay.classList.toggle("active");
+  });
+});
+
 const skillsSection = document.querySelector(".our-skills");
 const spans = document.querySelectorAll(".prog span");
 const nums = document.querySelectorAll(".stats .box .number");
