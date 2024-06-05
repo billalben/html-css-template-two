@@ -131,3 +131,9 @@ shuffleBtns.forEach((btn) => {
     });
   });
 });
+
+// Dynamic year in footer
+const year = new Date().getFullYear();
+const yearSpan = document.querySelector(".copyright-yr");
+
+yearSpan.textContent = year;
